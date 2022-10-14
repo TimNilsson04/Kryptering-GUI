@@ -34,25 +34,27 @@
           <text value="Button"/>
         </properties>
       </component>
-      <component id="a1939" class="javax.swing.JTextField" binding="ändraFrånKrypteringTillTextField" default-binding="true">
+      <component id="a1939" class="javax.swing.JTextField" binding="dekrypteringHärTextField" default-binding="true">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
         <properties>
-          <text value="Ändra från Kryptering till Dekryptering:"/>
+          <text value="Dekryptering här:"/>
         </properties>
       </component>
-      <component id="fd374" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
+      <component id="fd374" class="javax.swing.JTextArea" binding="msg1">
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value=""/>
+        </properties>
       </component>
-      <component id="26ec3" class="javax.swing.JTextArea" binding="textArea2" default-binding="true">
+      <component id="26ec3" class="javax.swing.JTextArea" binding="msg2">
         <constraints>
           <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
@@ -70,14 +72,14 @@
           <text value="Din text här ------&gt;"/>
         </properties>
       </component>
-      <component id="f8dab" class="javax.swing.JTextField" binding="krypteradeTextenHärTextField" default-binding="true">
+      <component id="f8dab" class="javax.swing.JTextField" binding="krypteradeDekrypteradeTextenHärTextField" default-binding="true">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
         <properties>
-          <text value="Krypterade texten här -------&gt;"/>
+          <text value="Krypterade/Dekrypterade texten här -&gt;"/>
         </properties>
       </component>
     </children>
