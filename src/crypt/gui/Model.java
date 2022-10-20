@@ -1,3 +1,5 @@
+package crypt.gui;
+
 import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -6,6 +8,8 @@ import java.io.IOException;
 import java.util.Scanner;
 
 class Model {
+
+
 
     public static void main(String[] args) throws IOException {
 
@@ -19,11 +23,11 @@ class Model {
 
 
         message1 = message();
-        crypt1 = crypting(crypt, message1, hex, k);
-        result1 = chararray(crypt1);
+        result1= crypting(crypt, message1, hex, k);
+       // result1 = chararray(crypt1);
 
         System.out.println("Ditt meddelande " + message1);
-        System.out.println("Hex " + crypt1);
+       // System.out.println("Hex " + crypt1);
         System.out.println("Krypteringen " + result1);
         filewriter(result1);
 
@@ -84,13 +88,10 @@ class Model {
             hex = Integer.toHexString(encrypt(k,m));
             crypt += hex;
         }
-        return crypt;
-    }
 
-    public static String chararray(String crypt1){
         String result = "";
 
-        char[] charArray = crypt1.toCharArray();
+        char[] charArray = crypt.toCharArray();
         for(int i = 0; i < charArray.length; i=i+2) {
             String st = ""+charArray[i]+""+charArray[i+1];
             char ch = (char)Integer.parseInt(st, 16);
@@ -122,4 +123,18 @@ class Model {
 
         return ;
     }
+
+   /* public static String chararray(String crypt1){
+        String result = "";
+
+        char[] charArray = crypt1.toCharArray();
+        for(int i = 0; i < charArray.length; i=i+2) {
+            String st = ""+charArray[i]+""+charArray[i+1];
+            char ch = (char)Integer.parseInt(st, 16);
+            result = result + ch;
+        }
+        return result;
+    }
+
+    */
 }
