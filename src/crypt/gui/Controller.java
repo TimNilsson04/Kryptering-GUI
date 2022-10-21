@@ -20,9 +20,9 @@ public class Controller extends JFrame {
 
     public class cryptListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            model.message(view.getmessage());
-            model.crypting(crypt, message1, hex, k);
-            view.sendcrypt(model.crypting());
+            model.msg(view.getmsg());
+            model.crypting();
+            view.sendcrypt(model.crypt());
         }
     }
 
@@ -34,3 +34,6 @@ public class Controller extends JFrame {
 
     }
 }
+
+
+

@@ -24,14 +24,17 @@ class Kryptering_Dekryptering {
     }
 
     public JPanel getPanel() {
+
         return panel1;
     }
 
-    public String getmessage() {
+    public String getmsg() {
+
         return msg1.getText();
     }
 
     public void sendcrypt(String c) {
+
         msg2.setText(c);
     }
 
@@ -42,7 +45,6 @@ class Kryptering_Dekryptering {
         frame.pack();
         frame.setVisible(true);
     }
-
     public void setCryptListener(Controller.cryptListener cryptListener) {
         button1.addActionListener(cryptListener);
     }

@@ -10,31 +10,35 @@ import java.util.Scanner;
 class Model {
 
 
+    private  int m;
+    private  int k = '(';
+    private  String crypt = "";
+    private  String crypt1;
+    private  String hex = "";
+    private  String message1 = "";
+    private  String result1 = new String();
+
 
     public static void main(String[] args) throws IOException {
 
-        String message1 = "";
-        int m;
-        int k = '(';
-        String crypt = "";
-        String crypt1;
-        String hex = "";
-        String result1 = new String();
 
-
-        message1 = message();
-        result1= crypting(crypt, message1, hex, k);
        // result1 = chararray(crypt1);
 
-        System.out.println("Ditt meddelande " + message1);
+       // System.out.println("Ditt meddelande " + message1);
        // System.out.println("Hex " + crypt1);
-        System.out.println("Krypteringen " + result1);
-        filewriter(result1);
+       // System.out.println("Krypteringen " + result1);
+       // filewriter(result1);
 
     }
+    public void msg(String getmsg){
+        message1 = getmsg;
+    }
 
+    public String crypt(){
+        return result1;
+    }
 
-    public static String message() throws IOException {
+    public void message() throws IOException {
 
         String message = "";
 
@@ -46,7 +50,7 @@ class Model {
 
 
 
-        FileReader file = new FileReader("minfil.txt");
+        FileReader file = new FileReader("src/minfil.txt");
 
         if(Answer != 0) {
             BufferedReader bufferedreader = new BufferedReader(file);
@@ -61,18 +65,18 @@ class Model {
 
             bufferedreader.close();
         }
-
-        return message;
+         message1 = message;
     }
 
-    public static int encrypt(int m, int k) {
+    public  int encrypt() {
 
         return (m ^ k);
 
     }
 
-    public static String crypting(String crypt, String message1,  String hex, int k ){
+    public void crypting(){
         int m;
+
         String custom;
 
         int Answer = JOptionPane.showConfirmDialog(null,"Vill du skriva egen nyckel??");
@@ -85,7 +89,7 @@ class Model {
 
         for (int i = 0; i < message1.length(); i++) {
             m = message1.charAt(i);
-            hex = Integer.toHexString(encrypt(k,m));
+            hex = Integer.toHexString(encrypt());
             crypt += hex;
         }
 
@@ -97,10 +101,11 @@ class Model {
             char ch = (char)Integer.parseInt(st, 16);
             result = result + ch;
         }
-        return result;
+        result1= result;
+
     }
 
-    public static void filewriter(String result1) throws IOException {
+    public void filewriter() throws IOException {
 
         int Answer = JOptionPane.showConfirmDialog(null,"Vill du skriva ner krypteringen i filen??");
 
